@@ -482,6 +482,11 @@ section { padding: var(--section) 0; position: relative; }
   letter-spacing: -0.035em;
   font-weight: 400;
 }
+/* Auf schmalen Handys etwas kleiner skalieren, damit die laengste
+   Zeile ("& Aufsuchende Assistenz.") nicht ueber den Rand laeuft. */
+@media (max-width: 639px) {
+  .hero h1 { font-size: clamp(1.95rem, 1.1rem + 5.5vw, 3.3rem); }
+}
 .hero h1 em { color: var(--accent-ink); font-style: italic; }
 .hero h1 .ln { display: block; overflow: hidden; }
 .hero h1 .ln > span {
